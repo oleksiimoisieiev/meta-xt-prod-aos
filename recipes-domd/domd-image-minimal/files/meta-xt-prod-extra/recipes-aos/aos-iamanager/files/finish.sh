@@ -1,7 +1,7 @@
 # !/bin/sh
 
 #TBD Dirty hack. Should be removed
-scp -rv -o "ServerAliveInterval=1" -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" /var/aos/crypt/*  root@192.168.0.3:/var/aos/crypt/
+scp -r -o "ServerAliveInterval=1" -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" /var/aos/crypt/*  root@192.168.0.3:/var/aos/crypt/
 
 systemctl restart aos.target
 
