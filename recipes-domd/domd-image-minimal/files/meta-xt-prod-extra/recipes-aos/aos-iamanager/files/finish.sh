@@ -7,11 +7,7 @@ ssh -o "ServerAliveInterval=1" -o "StrictHostKeyChecking=no" -o "UserKnownHostsF
 
 sync
 
-sleep 20
-
 # reboot domf
-xenstore-write control/user-reboot 2
+( sleep 20 ; xenstore-write control/user-reboot 2 ) &
 
-sleep 3
 
-systemctl restart aos.target
